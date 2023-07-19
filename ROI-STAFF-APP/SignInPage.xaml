@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ROI_STAFF_APP.SignInPage"
+             Title="SignInPage"
+             Shell.NavBarIsVisible="False">
+    
+    <StackLayout
+        Margin="30"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand">
+
+        <Frame Margin="20"
+           CornerRadius="75"
+           HeightRequest="150"
+           WidthRequest="150"
+           IsClippedToBounds="True"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+                HasShadow="True">
+            <Image x:Name="pic"
+                HeightRequest="200"
+                WidthRequest="200"
+                Source="roibg.png"
+                />
+        </Frame>
+        
+        
+
+        <Entry x:Name="email"
+               Placeholder="user@roi.com.au"
+               IsTextPredictionEnabled="True"
+               FontFamily="Trebuchet"
+               Margin="10"
+               Keyboard="Email"
+               ReturnType="Send"
+               IsSpellCheckEnabled="false"/>
+
+        
+
+        <Entry x:Name="password"
+               Placeholder="Password"
+               IsPassword="True"
+               Margin="10"
+               ReturnType="Send"
+               IsSpellCheckEnabled="false"/>
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+        <Button x:Name="SignIn"
+                Text="Sign In"
+                BackgroundColor="SlateGray"
+                FontFamily="TrebuchetBold"
+                FontAutoScalingEnabled="True"
+                Clicked="OnSubmitButtonClicked"
+                Routing.Route="MainPage"
+                Grid.Column="0"
+                FontSize="Body"
+                WidthRequest="100"
+                HeightRequest="50"
+                Margin="0, 0, 5, 0"
+                />
+
+        <Button x:Name="SignUp"
+                Text="Sign Up"
+                BackgroundColor="LightGray"
+                Grid.Column="1"
+                FontFamily="TrebuchetBold"
+                FontAutoScalingEnabled="True"
+                Clicked="OnSignUpButtonClick"
+                Routing.Route="MainPage"
+                WidthRequest="100"
+                HeightRequest="50"
+                Margin="0, 0, 5, 0"
+                FontSize="Body"/>
+
+
+        </Grid>
+
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ROI_STAFF_APP.SignUpPage"
+             Title="SignUpPage"
+             Shell.NavBarIsVisible="False">
+    
+    <StackLayout
+        Margin="30"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand">
+
+        
+
+       
+        <Label x:Name="newLabel" Text=" " IsVisible="True"/>
+        <Frame Margin="20"
+           CornerRadius="75"
+           HeightRequest="150"
+           WidthRequest="150"
+           IsClippedToBounds="True"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+                HasShadow="True">
+            <Image x:Name="pic"
+                HeightRequest="200"
+                WidthRequest="200"
+                Source="roibg.png"
+                />
+        </Frame>
+        
+        
+        <Entry x:Name="name"
+               Placeholder="First Name"
+               IsTextPredictionEnabled="True"
+               FontFamily="Trebuchet"
+               Margin="10"
+               Keyboard="Text"
+               ReturnType="Send"
+               IsSpellCheckEnabled="false"/>
+
+        <Entry x:Name="lastname"
+               Placeholder="Last Name"
+               IsTextPredictionEnabled="True"
+               FontFamily="Trebuchet"
+               Margin="10"
+               Keyboard="Text"
+               ReturnType="Send"
+               IsSpellCheckEnabled="false"/>
+
+        <Entry x:Name="phone"
+               Placeholder="phone number"
+               IsTextPredictionEnabled="True"
+               FontFamily="Trebuchet"
+               Margin="10"
+               Keyboard="Telephone"
+               ReturnType="Send"
+               IsSpellCheckEnabled="false"/>
+
+        <Picker Title="Role"
+                x:Name="staffrole"
+                Margin="10"
+                FontFamily="Trebuchet">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                  <x:String>Human Resource</x:String>
+                  <x:String>ICT Team</x:String>
+                  <x:String>Graphic Designer</x:String>
+                  <x:String>Marketing</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Entry x:Name="email"
+               Placeholder="Email ex: user@roi.com.au"
+               IsTextPredictionEnabled="True"
+               FontFamily="Trebuchet"
+               Margin="10"
+               Keyboard="Email"
+               ReturnType="Send"
+               IsSpellCheckEnabled="false"/>
+
+        <Entry x:Name="password"
+               Placeholder="Password"
+               IsPassword="True"
+               Margin="10"
+               ReturnType="Send"
+               IsSpellCheckEnabled="false"/>
+
+        <Entry x:Name="confirmpassword"
+               Placeholder="Confirm Password"
+               IsPassword="True"
+               Margin="10"
+               ReturnType="Send"
+               IsSpellCheckEnabled="false"/>
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+        <Button x:Name="SignIn"
+                Text="Sign In"
+                Clicked="OnSignInButtonClicked"
+                BackgroundColor="SlateGray"
+                FontFamily="TrebuchetBold"
+                FontAutoScalingEnabled="True"
+                Routing.Route="MainPage"
+                Grid.Column="0"
+                FontSize="Body"
+                WidthRequest="100"
+                HeightRequest="50"
+                Margin="0, 0, 5, 0"
+                />
+
+        <Button x:Name="request"
+                Text="Request"
+                Clicked="OnRequestButtonClicked"
+                BackgroundColor="LightGray"
+                Grid.Column="1"
+                FontFamily="TrebuchetBold"
+                FontAutoScalingEnabled="True"
+                Routing.Route="MainPage"
+                WidthRequest="100"
+                HeightRequest="50"
+                Margin="0, 0, 5, 0"
+                FontSize="Body"
+                />
+
+      
+
+
+
+        </Grid>
+
+    </StackLayout>
+    
+
+
+</ContentPage>

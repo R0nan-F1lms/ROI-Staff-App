@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ROI_STAFF_APP.SettingsPage"
+             Title="SettingsPage">
+
+    <VerticalStackLayout>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            
+            <Label Grid.Row="1">Change Theme</Label>
+            <Switch x:Name="togTheme" Grid.Row="2" Toggled="OnThemeSwitchToggled" BackgroundColor="DimGrey" />
+
+            <Label Grid.Column="2" x:Name="fontSizeLable">Font Size</Label>
+            <Slider Grid.Column="1" x:Name="newFontSize" Minimum="14" Maximum="20" Value="14" ValueChanged="OnSliderValueChanged"/>
+
+
+
+            <Button Grid.Row="3" Grid.Column="1" Clicked="SaveButton_Clicked" Text="SAVE USER SETTINGS"></Button>
+        </Grid>
+    </VerticalStackLayout>
+
+</ContentPage>

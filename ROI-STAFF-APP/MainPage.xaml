@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             x:Class="ROI_STAFF_APP.MainPage">
+
+
+  
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+        <ScrollView Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="Center">
+
+            <StackLayout>
+
+                <Button x:Name="ContactsBtn"
+                        Text="Contacts"
+                        CornerRadius="20"
+                        HeightRequest="100"
+                        Clicked="contactsOpen"
+                        Margin="10"/>
+
+                <Button x:Name="IntranetBtn"
+                        Text="Intranet"
+                        CornerRadius="20"
+                        HeightRequest="100"
+                        Margin="10"
+                        />
+
+                <Button x:Name="HrBtn"
+                        Text="Human Resource"
+                        CornerRadius="20"
+                        HeightRequest="100"
+                        Clicked="hrOpen"
+                        Margin="10"/>
+
+                <Button x:Name="SettingsBtn"
+                        Text="Settings"
+                        CornerRadius="20"
+                        HeightRequest="100"
+                        Clicked="SettingsOpen"
+                        Margin="10"/>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
+
